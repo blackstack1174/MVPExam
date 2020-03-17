@@ -22,5 +22,7 @@ namespace MVP1.MainViewPresenter.Presenter.Interface
         IMainViewPresenter MainPresenter { get; set; }
 
         void InitializeSubViews();
+
+        void ShowMessage(string message);
     }
 }

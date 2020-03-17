@@ -18,6 +18,7 @@ namespace MVP1.MainViewPresenter.Presenter
         public MainViewPresenter(IMainView view)
         {
             CurrentForm = view;
+            CurrentForm.ShowMessage("테스트");
         }
 
     }

@@ -17,6 +17,7 @@ namespace MVP1
         public MainForm()
         {
             InitializeComponent();
+            MainPresenter = new MainViewPresenter.Presenter.MainViewPresenter(this);
         }
 
 
@@ -27,10 +28,9 @@ namespace MVP1
         public IBaseModel CurrentData { get; set; }
         public IMainViewPresenter MainPresenter { get; set; }
 
-        public void InitializeSubViews()
-        {
-            
-        }
+        public void InitializeSubViews() { }
+
+        public void ShowMessage(string message) { MessageBox.Show(message); }
         #endregion
     }
 }
