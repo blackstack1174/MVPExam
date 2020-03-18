@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVP1.MainViewPresenter.Models
 {
-    class MemoModel : IBaseModel
+    public class MemoModel : IBaseModel
     {
 
         /// <summary>
@@ -22,8 +22,10 @@ namespace MVP1.MainViewPresenter.Models
         /// <summary>
         /// 생성자
         /// </summary>
-        public MemoModel()
+        public MemoModel(string title, string description)
         {
+            this.Title = title;
+            this.Description = description;
         }
 
         public bool Save()

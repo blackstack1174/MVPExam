@@ -24,5 +24,9 @@ namespace MVP1.MainViewPresenter.Presenter.Interface
         void InitializeSubViews();
 
         void ShowMessage(string message);
+
+        event EventHandler LoadEvent;
+
+        void GridBiddng(IBaseModel baseModels);
     }
 }

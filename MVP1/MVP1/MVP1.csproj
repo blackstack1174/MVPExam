@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="MainViewPresenter\Models\Interfaces\IBaseModel.cs" />
     <Compile Include="MainViewPresenter\Models\MemoModel.cs" />
+    <Compile Include="MainViewPresenter\Models\ResultModel.cs" />
     <Compile Include="MainViewPresenter\Presenter\Interface\IMainView.cs" />
     <Compile Include="MainViewPresenter\Presenter\Interface\IMainViewPresenter.cs" />
     <Compile Include="MainViewPresenter\Presenter\MainViewPresenter.cs" />

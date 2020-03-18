@@ -25,12 +25,28 @@ namespace MVP1
         //* IMainView
         //************************
         #region
-        public IBaseModel CurrentData { get; set; }
+        public List<IBaseModel> CurrentData { get; set; }
         public IMainViewPresenter MainPresenter { get; set; }
+        IBaseModel IMainView.CurrentData { get; set; }
 
         public void InitializeSubViews() { }
 
+        event EventHandler IMainView.LoadEvent
+        {
+            add { this.Load += value; }
+            remove { this.Load -= value; }
+        }
+
+
         public void ShowMessage(string message) { MessageBox.Show(message); }
+        
+        
+        public void GridBiddng(IBaseModel baseModel)
+        {
+            baseModel.
+            this.dataGridView1.DataSource = baseModel;
+        }
+
         #endregion
     }
 }
