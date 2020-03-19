@@ -42,7 +42,7 @@ namespace MVP1
         public void GridBiddng(IBaseModel baseModel)
         {
             CurrentData = baseModel;
-            this.dataGridView1.DataSource = CurrentData;
+            this.bindingSource1.DataSource = CurrentData;
         }
 
         #endregion

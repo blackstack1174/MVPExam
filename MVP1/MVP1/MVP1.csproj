@@ -72,6 +72,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\MVP1.MainViewPresenter.Models.MemoModel.datasource" />
+    <None Include="Properties\DataSources\MVP1.MainViewPresenter.Models.ResultModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
