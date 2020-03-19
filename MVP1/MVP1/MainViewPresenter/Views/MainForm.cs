@@ -25,9 +25,8 @@ namespace MVP1
         //* IMainView
         //************************
         #region
-        public List<IBaseModel> CurrentData { get; set; }
+        public IBaseModel CurrentData { get; set; }
         public IMainViewPresenter MainPresenter { get; set; }
-        IBaseModel IMainView.CurrentData { get; set; }
 
         public void InitializeSubViews() { }
 
@@ -39,14 +38,26 @@ namespace MVP1
 
 
         public void ShowMessage(string message) { MessageBox.Show(message); }
-        
-        
+
         public void GridBiddng(IBaseModel baseModel)
         {
-            baseModel.
-            this.dataGridView1.DataSource = baseModel;
+            CurrentData = baseModel;
+            this.dataGridView1.DataSource = CurrentData;
         }
 
         #endregion
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView listView = (DataGridView)sender;
+
+            if (listView.Rows.Count > 0)
+            {
+                for (int i = 0; i < listView.Columns.Count; i++)
+                {
+                    listView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }
+        }
     }
 }

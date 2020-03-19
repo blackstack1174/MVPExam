@@ -19,5 +19,17 @@ namespace MVP1.MainViewPresenter.Models
         #endregion IBaseModel
         public IList<MemoModel> UserList { get; set; }
 
+        public int TotalCount
+        {
+            get
+            {
+                if (this.UserList == null)
+                    return 0;
+
+                return this.UserList.Count;
+            }
+        }
+
+
     }
 }

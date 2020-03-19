@@ -8,6 +8,10 @@ namespace MVP1.MainViewPresenter.Models
 {
     public class MemoModel : IBaseModel
     {
+        /// <summary>
+        /// 사용자 공유번호를 지정/반환합니다.
+        /// </summary>
+        public int UserIdx { get; set; }
 
         /// <summary>
         /// 제목을 지정/반환합니다.
@@ -22,10 +26,9 @@ namespace MVP1.MainViewPresenter.Models
         /// <summary>
         /// 생성자
         /// </summary>
-        public MemoModel(string title, string description)
+        public MemoModel()
         {
-            this.Title = title;
-            this.Description = description;
+           
         }
 
         public bool Save()

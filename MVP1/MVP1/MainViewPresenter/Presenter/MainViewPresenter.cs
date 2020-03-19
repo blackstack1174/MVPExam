@@ -29,13 +29,13 @@ namespace MVP1.MainViewPresenter.Presenter
             {
                 UserList = new List<MemoModel>()
                 {
-                    new MemoModel("크크루크크", "테스트"),
-                    new MemoModel("크크루크크", "테스트"),
-                    new MemoModel("크크루크크", "테스트")
+                    new MemoModel(){ UserIdx=1,Title="제목",Description="테스트"},
+                    new MemoModel(){ UserIdx=2,Title="제목",Description="테스트"},
+                    new MemoModel(){ UserIdx=3,Title="제목",Description="테스트"},
+                    new MemoModel(){ UserIdx=4,Title="제목",Description="테스트"}
                 }
             };
-            CurrentForm.CurrentData = memoModels;
-            CurrentForm.GridBiddng(CurrentForm.CurrentData);
+            CurrentForm.GridBiddng(memoModels);
 
         }
     }
